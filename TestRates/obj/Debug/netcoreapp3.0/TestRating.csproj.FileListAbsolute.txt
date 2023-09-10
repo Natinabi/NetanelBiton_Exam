@@ -1,0 +1,17 @@
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\TestRating.exe
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\policy.json
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\TestRating.deps.json
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\TestRating.runtimeconfig.json
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\TestRating.runtimeconfig.dev.json
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\TestRating.dll
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\TestRating.pdb
+C:\Projects\Exams\ForMail\TestingRates\TestRates\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.csproj.AssemblyReference.cache
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.AssemblyInfoInputs.cache
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.AssemblyInfo.cs
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.csproj.CoreCompileInputs.cache
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.csproj.CopyComplete
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.dll
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.pdb
+C:\Projects\Exams\ForMail\TestingRates\TestRates\obj\Debug\netcoreapp3.0\TestRating.genruntimeconfig.cache

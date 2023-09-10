@@ -1,0 +1,28 @@
+2023-09-10 01:15:31 [INFO] - Application Starting
+2023-09-10 01:15:32 [INFO] - Starting rate.
+2023-09-10 01:15:32 [INFO] - Rating TRAVEL policy...
+2023-09-10 01:15:32 [INFO] - Start Validating policy.
+2023-09-10 01:15:32 [INFO] - Start Validating policy.
+2023-09-10 01:15:32 [INFO] - Rating completed.
+2023-09-10 01:15:32 [INFO] - Policy Rate is : 75.0
+2023-09-10 01:18:12 [INFO] - Application Starting
+2023-09-10 01:18:13 [INFO] - Starting rate.
+2023-09-10 01:18:13 [INFO] - Rating TRAVEL policy...
+2023-09-10 01:18:13 [INFO] - Start Validating policy.
+2023-09-10 01:18:13 [INFO] - Start Validating policy.
+2023-09-10 01:18:13 [INFO] - Rating completed.
+2023-09-10 01:18:13 [INFO] - Policy Rate is : 75.0
+2023-09-10 01:19:02 [INFO] - Application Starting
+2023-09-10 01:19:02 [INFO] - Starting rate.
+2023-09-10 01:19:02 [INFO] - Rating TRAVEL policy...
+2023-09-10 01:19:02 [INFO] - Start Validating policy.
+2023-09-10 01:19:02 [INFO] - Start Validating policy.
+2023-09-10 01:19:02 [INFO] - Rating completed.
+2023-09-10 01:19:02 [INFO] - Policy Rate is : 75.0
+2023-09-10 02:28:58 [INFO] - Application Starting
+2023-09-10 02:28:58 [INFO] - Starting rate.
+2023-09-10 02:28:58 [INFO] - Rating TRAVEL policy...
+2023-09-10 02:28:58 [INFO] - Start Validating policy.
+2023-09-10 02:28:58 [INFO] - Start Validating policy.
+2023-09-10 02:28:58 [INFO] - Rating completed.
+2023-09-10 02:28:58 [INFO] - Policy Rate is : 75.0

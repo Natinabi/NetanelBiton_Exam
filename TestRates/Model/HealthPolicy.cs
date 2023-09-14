@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestRating.Model
 {
-    public class HealthPolicy
+    public class HealthPolicy : Policy
     {
         public string Gender { get; set; }
         public decimal Deductible { get; set; }

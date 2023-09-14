@@ -26,3 +26,15 @@
 2023-09-10 02:28:58 [INFO] - Start Validating policy.
 2023-09-10 02:28:58 [INFO] - Rating completed.
 2023-09-10 02:28:58 [INFO] - Policy Rate is : 75.0
+2023-09-14 12:44:43 [INFO] - Application Starting
+2023-09-14 12:44:43 [ERROR] - Error : Error Load Policy: Error Deserialize Policy object : Error Policy type in policy
+2023-09-14 12:45:02 [INFO] - Application Starting
+2023-09-14 12:45:43 [ERROR] - Error : Error Load Policy: Error Deserialize Policy object : Error Policy type in policy
+2023-09-14 12:45:50 [INFO] - Application Starting
+2023-09-14 12:46:25 [INFO] - Application Starting
+2023-09-14 12:46:42 [INFO] - Start Validating policy.
+2023-09-14 12:46:42 [INFO] - End Validating policy.
+2023-09-14 12:46:42 [INFO] - Starting rate.
+2023-09-14 12:46:42 [INFO] - Rating TRAVEL policy...
+2023-09-14 12:46:42 [INFO] - Rating completed.
+2023-09-14 12:46:42 [INFO] - Policy Rate is : 75.0

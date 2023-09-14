@@ -16,24 +16,24 @@ namespace Tests
         {
             //Arrange
             
-            Policy policy = new Policy
+            Policy policy = new LifePolicy
             {
                 Type = PolicyType.Life,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(),
                 IsSmoker = true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 10,
-                Gender = "Male",
-                Deductible = 0
+                Amount = 10
+               
             };
 
-            var logger = new PLogger();
-            var life = new LifePolicyRating(logger);
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var life = new LifePolicyRating(logger);
 
-            //Act
-            life.Rate(policy);
+                //Act
+                life.Rate(policy);
+            }
         }
 
         [TestMethod]
@@ -42,24 +42,24 @@ namespace Tests
         {
             //Arrange
            
-            Policy policy = new Policy
+            Policy policy = new LifePolicy
             {
                 Type = PolicyType.Life,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(1920, 1, 1),
                 IsSmoker = true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 10,
-                Gender = "Male",
-                Deductible = 0
+                Amount = 10
+               
             };
 
-            var logger = new PLogger();
-            var life = new LifePolicyRating(logger);
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var life = new LifePolicyRating(logger);
 
-            //Act
-            life.Rate(policy);
+                //Act
+                life.Rate(policy);
+            }
         }
 
         [TestMethod]
@@ -68,24 +68,23 @@ namespace Tests
         {
             //Arrange
 
-            Policy policy = new Policy
+            Policy policy = new LifePolicy
             {
                 Type = PolicyType.Life,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(1920, 1, 1),
                 IsSmoker = true,
                 Amount = 0,
-                Country = "Argentina",
-                Days = 10,
-                Gender = "Male",
-                Deductible = 0
             };
 
-            var logger = new PLogger();
-            var life = new LifePolicyRating(logger);
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var life = new LifePolicyRating(logger);
 
-            //Act
-            life.Rate(policy);
+                //Act
+                life.Rate(policy);
+            }
         }
     }
 }

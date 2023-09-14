@@ -29,13 +29,12 @@ namespace TestRating.Services
         public decimal Rate(Policy policy)
         {
             _logger.LogInformation("Rating Health policy...");
-
-            if (IsValidPolicy(policy))
-            {
-                if (policy.Gender == Gender.Male.ToString())
+            var hPolicy = (HealthPolicy)policy;
+           
+            if (hPolicy.Gender == Gender.Male.ToString())
                 {
 
-                    if (policy.Deductible < 500)
+                    if (hPolicy.Deductible < 500)
                     {
                         Rating = 1000m;
                     }
@@ -46,7 +45,7 @@ namespace TestRating.Services
                 }
                 else
                 {
-                    if (policy.Deductible < 800)
+                    if (hPolicy.Deductible < 800)
                     {
                         Rating = 1100m;
                     }
@@ -55,22 +54,9 @@ namespace TestRating.Services
                         Rating = 1000m;
                     }
                 }
-            }
+          
             return Rating;
         }
 
-        public bool IsValidPolicy(Policy policy)
-        {
-            _logger.LogInformation("Start Validating policy.");
-
-            if (string.IsNullOrEmpty(policy.Gender))
-            {
-                throw new Exception("Health policy must specify Gender");
-            }
-
-            _logger.LogInformation("End Validating policy.");
-
-            return true;
-        }
     }
 }

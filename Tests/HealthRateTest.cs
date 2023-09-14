@@ -17,23 +17,23 @@ namespace Tests
         {
             //Arrange
             
-            Policy policy = new Policy { 
+            Policy policy = new HealthPolicy { 
                 Type= PolicyType.Health,
                 FullName = "Israel", 
                 DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker= true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 20,
                 Gender = "",
                 Deductible= 0 
             };
 
-            var logger = new PLogger();
-            var healt = new HealthPolicyRating(logger);
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var healt = new HealthPolicyRating(logger);
+           
            
             //Act
             healt.Rate(policy);
+            }
         }
 
         [TestMethod]
@@ -42,15 +42,11 @@ namespace Tests
             //Arrange
             decimal expected = 1000m;
             
-            Policy policy = new Policy
+            Policy policy = new HealthPolicy
             {
                 Type = PolicyType.Health,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 20,
                 Gender = "Male",
                 Deductible = 300
             };
@@ -67,15 +63,11 @@ namespace Tests
             //Arrange
             decimal expected = 900m;
             
-            Policy policy = new Policy
+            Policy policy = new HealthPolicy
             {
                 Type = PolicyType.Health,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 20,
                 Gender = "Male",
                 Deductible = 500
             };
@@ -92,18 +84,7 @@ namespace Tests
             //Arrange
             decimal expected = 1100m;
             
-            Policy policy = new Policy
-            {
-                Type = PolicyType.Health,
-                FullName = "Israel",
-                DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 20,
-                Gender = "FeMale",
-                Deductible = 500
-            };
+            Policy policy = new HealthPolicy { Type = PolicyType.Health, FullName = "Israel", DateOfBirth = new DateTime(2000, 1, 1), Gender = "FeMale", Deductible = 500 };
 
             var logger = new PLogger();
             var healt = new HealthPolicyRating(logger);
@@ -118,18 +99,7 @@ namespace Tests
             //Arrange
             decimal expected = 1000m;
             
-            Policy policy = new Policy
-            {
-                Type = PolicyType.Health,
-                FullName = "Israel",
-                DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
-                Country = "Argentina",
-                Days = 20,
-                Gender = "FeMale",
-                Deductible = 900
-            };
+            Policy policy = new HealthPolicy { Type = PolicyType.Health, FullName = "Israel", DateOfBirth = new DateTime(2000, 1, 1), Gender = "FeMale", Deductible = 900 };
 
             var logger = new PLogger();
             var healt = new HealthPolicyRating(logger);

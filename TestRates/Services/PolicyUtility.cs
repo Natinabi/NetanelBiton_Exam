@@ -67,7 +67,12 @@ namespace TestRating.Services
         {
             try
             {
-                return JsonConvert.DeserializeObject<Policy>(PolicyJson, new StringEnumConverter());
+                if (GetPolicyType(PolicyJson) == PolicyType.Health)
+                    return JsonConvert.DeserializeObject<HealthPolicy>(PolicyJson, new StringEnumConverter());
+                else if (GetPolicyType(PolicyJson) == PolicyType.Travel)
+                    return JsonConvert.DeserializeObject<TravelPolicy>(PolicyJson, new StringEnumConverter());
+                else
+                    return JsonConvert.DeserializeObject<LifePolicy>(PolicyJson, new StringEnumConverter());
             }
             catch (Exception ex)
             {
@@ -76,6 +81,20 @@ namespace TestRating.Services
             }
         }
 
+        private PolicyType GetPolicyType(string PolicyJson)
+        {
+            dynamic data = JObject.Parse(PolicyJson);
+            if (data.type == "Helth")
+                return PolicyType.Health;
+            else if (data.type == "Travel")
+                return PolicyType.Travel;
+            else if (data.type == "Life")
+                return PolicyType.Life;
+
+            throw new Exception("Error Policy type in policy");
+
+
+        }
         private bool IsValidJson(string json)
         {
             try

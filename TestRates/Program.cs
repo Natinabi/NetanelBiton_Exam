@@ -24,13 +24,20 @@ namespace TestRating
             {
                 var PolicyPathFile = "policy.json";
                 var Policy = PolicyUtility.LoadPolicy(PolicyPathFile);
-               
-                logger.LogInformation("Starting rate.");
 
-                var Rating = RatingEngine.Rate(Policy);
-                
-                logger.LogInformation("Rating completed.");
-                logger.LogInformation($"Policy Rate is : {Rating}");
+                logger.LogInformation("Start Validating policy.");
+                bool isPolicyValid = ValidatePolicy.IsValidPolicy(Policy);
+                logger.LogInformation("End Validating policy.");
+
+                if (isPolicyValid)
+                {
+                    logger.LogInformation("Starting rate.");
+
+                    var Rating = RatingEngine.Rate(Policy);
+
+                    logger.LogInformation("Rating completed.");
+                    logger.LogInformation($"Policy Rate is : {Rating}");
+                }
             }
             catch (Exception ex)
             {

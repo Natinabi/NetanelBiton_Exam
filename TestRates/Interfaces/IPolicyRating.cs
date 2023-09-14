@@ -12,6 +12,6 @@ namespace TestRating.Interfaces
     {
         PolicyType policyType { get; }
         decimal Rate(Policy policy);
-        bool IsValidPolicy(Policy policy);
+       // bool IsValidPolicy(Policy policy);
     }
 }

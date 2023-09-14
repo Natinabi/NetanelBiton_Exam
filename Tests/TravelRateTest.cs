@@ -16,25 +16,24 @@ namespace Tests
         {
             //Arrange
 
-            Policy policy = new Policy
+            Policy policy = new TravelPolicy
             {
                 Type = PolicyType.Travel,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 0,
                 Country = "Argentina",
-                Days = -1,
-                Gender = "Male",
-                Deductible = 0
+                Days = -1
             };
 
-            var logger = new PLogger();
-            var travel = new TravelPolicyRating(logger);
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var travel = new TravelPolicyRating(logger);
 
-            //Act 
+                //Act 
 
-            travel.Rate(policy);
+                travel.Rate(policy);
+            }
         }
         [TestMethod]
         [ExpectedException(typeof(System.Exception))]
@@ -42,24 +41,24 @@ namespace Tests
         {
             //Arrange
 
-            Policy policy = new Policy
+            Policy policy = new TravelPolicy
             {
                 Type = PolicyType.Travel,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
                 Country = "Argentina",
-                Days = 200,
-                Gender = "Male",
-                Deductible = 0
+                Days = 200
             };
-            var logger = new PLogger();
-            var travel = new TravelPolicyRating(logger);
 
-            //Act + Assert
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var travel = new TravelPolicyRating(logger);
 
-            travel.Rate(policy);
+                //Act + Assert
+
+                travel.Rate(policy);
+            }
         }
 
         [TestMethod]
@@ -68,25 +67,24 @@ namespace Tests
         {
             //Arrange
 
-            Policy policy = new Policy
+            Policy policy = new TravelPolicy
             {
                 Type = PolicyType.Travel,
                 FullName = "Israel",
                 DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
                 Country = "",
-                Days = 10,
-                Gender = "Male",
-                Deductible = 0
+                Days = 10
             };
 
-            var logger = new PLogger();
-            var travel = new TravelPolicyRating(logger);
+            if (ValidatePolicy.IsValidPolicy(policy))
+            {
+                var logger = new PLogger();
+                var travel = new TravelPolicyRating(logger);
 
-            //Act 
+                //Act 
 
-            travel.Rate(policy);
+                travel.Rate(policy);
+            }
 
         }
         [TestMethod]
@@ -94,17 +92,12 @@ namespace Tests
         {
             //Arrange
 
-            Policy policy = new Policy
+            TravelPolicy policy = new TravelPolicy
             {
                 Type = PolicyType.Travel,
                 FullName = "Israel",
-                DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
                 Country = "Italy",
-                Days = 10,
-                Gender = "Male",
-                Deductible = 0
+                Days = 10
             };
 
             decimal expected = policy.Days * 2.5m * 3;
@@ -120,17 +113,12 @@ namespace Tests
         {
             //Arrange
 
-            Policy policy = new Policy
+            TravelPolicy policy = new TravelPolicy
             {
                 Type = PolicyType.Travel,
                 FullName = "Israel",
-                DateOfBirth = new DateTime(2000, 1, 1),
-                IsSmoker = true,
-                Amount = 10,
                 Country = "Argentina",
-                Days = 10,
-                Gender = "Male",
-                Deductible = 0
+                Days = 10
             };
 
             decimal expected = policy.Days * 2.5m;
